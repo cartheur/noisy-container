@@ -22,7 +22,7 @@ pip install requests
 
 Clone the repository
 ```
-git clone https://github.com/madereddy/noisy.git
+git clone https://github.com/cartheur/noisy-container.git
 ```
 
 Navigate into the `noisy` directory
@@ -100,12 +100,8 @@ Some edge-cases examples are available on the `examples` folder. You can read mo
 
 * **Itay Hury** - *Initial work* - [1tayH](https://github.com/1tayH)
 * **madereddy**- *Docker build + Python Upgrade* 
+* **cartheur**-  *Targeted as a test-source for ai-ops*
 
 ## License
 
 This project is licensed under the GNU GPLv3 License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-This project has been inspired by
-[https://github.com/1tayH/noisy]
