@@ -25,21 +25,15 @@ Clone the repository
 git clone https://github.com/cartheur/noisy-container.git
 ```
 
-Navigate into the `noisy` directory
+Build the container
 ```
-cd noisy
-```
-
-Run the script
-
-```
-python noisy.py --config config.json
+docker build -t noisy .
 ```
 
-The program can accept a number of command line arguments:
+Run the container
+
 ```
-$ python noisy.py --help
-usage: noisy.py [-h] [--log -l] --config -c [--timeout -t]
+docker run noisy --config config.json
 
 optional arguments:
   -h, --help    show this help message and exit
@@ -75,27 +69,6 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): www.reddit.com:4
 DEBUG:urllib3.connectionpool:https://www.reddit.com:443 "GET /user/Saditon HTTP/1.1" 200 None
 ...
 ```
-
-## Use Docker
-
-1. Pull the container and run it:
-
-`docker run -it madereddy/noisy --config config.json`
-
-2. Use a compose file inside a docker-compose.yml or portainer stack
-
-````````````
-version: "2"
-services:
-  noisy:
-    image: madereddy/noisy:latest
-    container_name: noisy
-    restart: always
-````````````
-## Some examples
-
-Some edge-cases examples are available on the `examples` folder. You can read more there [examples/README.md](examples/README.md).
-
 ## Authors
 
 * **Itay Hury** - *Initial work* - [1tayH](https://github.com/1tayH)
